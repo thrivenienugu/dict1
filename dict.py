@@ -24,7 +24,13 @@ def save_dict(C):
     cur = C.cursor()
     cur.execute("COMMIT;")
     cur.close()
-
+def read_print():
+    print('''Hello and welcome to the phone list, available commands:
+    ADD    - add a phone number
+    DELETE - delete a contact
+    LIST   - list all phone numbers
+    QUIT   - quit the program''')
+read_print()   
 while True: ## REPL - Read Execute Program Loop
     cmd = input("Command: ")
     if cmd == "list":
